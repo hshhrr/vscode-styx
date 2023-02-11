@@ -575,7 +575,7 @@ def get_theme(name:str) -> dict:
     }
 
 theme = json.dumps(get_theme("Styx"), indent=4)
-path = r"C:/Users/hasan/OneDrive/Desktop/vscode-theme/styx/themes/Styx-color-theme.json"
+path = r"./themes/Styx-color-theme.json"
 
 with open(file=path, mode="w") as jsonfile:
     jsonfile.write(theme)
