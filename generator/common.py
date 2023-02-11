@@ -5,21 +5,21 @@ def get_ui_colors() -> dict:
     basecolors = BaseColors()
     
     return {
-		#	https://code.visualstudio.com/api/references/theme-color
-		
-  		#	<<- Base colors ->>
-		"focusBorder": basecolors.bg0,
-		"foreground": basecolors.fg0,
-		# "disabledForeground": basecolors.red,
-		"widget.border": basecolors.bg1,
-		"widget.shadow": basecolors.bg0 + "10",
-		# "selection.background": basecolors.red,
-		# "descriptionForeground": basecolors.red,
-		# "errorForeground": basecolors.red,
-		# "icon.foreground": basecolors.red,
-		"sash.hoverBorder": basecolors.bg1,
-  
-		#	<<- Window border ->>
+        #	https://code.visualstudio.com/api/references/theme-color
+        
+        #	<<- Base colors ->>
+        "focusBorder": basecolors.bg0,
+        "foreground": basecolors.fg0,
+        # "disabledForeground": basecolors.red,
+        "widget.border": basecolors.bg1,
+        "widget.shadow": basecolors.bg0 + "10",
+        # "selection.background": basecolors.red,
+        # "descriptionForeground": basecolors.red,
+        # "errorForeground": basecolors.red,
+        # "icon.foreground": basecolors.red,
+        "sash.hoverBorder": basecolors.bg1,
+        
+        #	<<- Window border ->>
         # "window.activeBorder": basecolors.red,
         # "window.inactiveBorder": basecolors.red,
 
@@ -31,7 +31,7 @@ def get_ui_colors() -> dict:
         # "textLink.foreground": basecolors.red,
         # "textPreformat.foreground": basecolors.red,
         # "textSeparator.foreground": basecolors.red,
-        
+
         #	<<- Action colors ->>
         "toolbar.hoverBackground": basecolors.bg1,
         "toolbar.hoverOutline": basecolors.bg1,
@@ -51,7 +51,7 @@ def get_ui_colors() -> dict:
         # "checkbox.border": basecolors.red,
         # "checkbox.selectBackground": basecolors.red,
         # "checkbox.selectBorder": basecolors.red,
-        
+
         #  <<- Dropdown control ->>
         "dropdown.background": basecolors.bg1,
         "dropdown.listBackground": basecolors.bg1,
@@ -759,5 +759,4 @@ def get_ui_colors() -> dict:
 
         #  <<- Ports Colors ->>
         # "ports.iconRunningProcessForeground": basecolors.red,
-	}
-    
+    }
