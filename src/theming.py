@@ -1,13 +1,39 @@
-import json
-from syntax_highlighting_systems import DebugSyntaxHighlitingSystem
-from syntax_highlighting_systems import VSCodeSyntaxHighlitingSystem
-from common import get_ui_colors
+import sys, inspect
+from common import *
+from bracket_colors import *
+from syntax_highlighting_systems import *
 
 
+# Properties
 props = lambda h : dict(zip(["foreground", "fontStyle"], [x for x in h if x is not None]))
 
-def get_token_colors() -> list:
-    sh = DebugSyntaxHighlitingSystem()
+# List of class names in syntax_highlighting_systems module
+sh_systems = [(name, obj) for name, obj in inspect.getmembers(sys.modules["syntax_highlighting_systems"]) if inspect.isclass(obj)]
+
+# List of function names for Bracket Coloring
+bcf = [(name, obj) for name, obj in inspect.getmembers(sys.modules["bracket_colors"]) if inspect.isfunction(obj)]
+
+
+def get_syntax_highlighting_system(sh_system):
+    common = "SyntaxHighlitingSystem"
+    for s, obj in sh_systems:
+        if common in s and s.split(common)[0].lower() == sh_system.lower():
+            return obj
+            
+    return DebugSyntaxHighlitingSystem()
+
+
+def get_bracket_colors(bc):
+    common = "_bracket_colors"
+    for s, func in bcf:
+        if common in s and s.split(common)[0].lower() == bc.lower():
+            return func()
+            
+    return debug_bracket_colors()
+
+
+def get_token_colors(sh_system: str) -> list:
+    sh = get_syntax_highlighting_system(sh_system)
     
     return [
         {
@@ -18,25 +44,36 @@ def get_token_colors() -> list:
                 "string.quoted.docstring.multi",
                 "string.quoted.docstring.multi punctuation.definition.string",
                 "source string.quoted.docstring.multi punctuation.definition.string",
+                "constant.other.ellipsis",
             ],
             "settings": props(sh.comment)
         },
         {
             "name": "Variables",
             "scope": [
-                "variable.other.readwrite",
+                # "variable.other.readwrite",
                 "variable.other.member",
                 "variable.other.property.js",
-                   "string constant.other.placeholder"
+                "string constant.other.placeholder",
+                "meta.function-call.arguments",
+                "support.variable.property.js",
+                "entity.name.variable",
             ],
             "settings": props(sh.variable)
         },
         {
+            "name": "Source - Undefined",
+            "scope": [
+                "source.python"
+            ],
+            "settings": props(sh.module)
+        },
+        {
             "name": "Colors",
             "scope": [
-                "constant.other.color"
+                "constant.other.color",
             ],
-            "settings": props(sh.variable)
+            "settings": props(sh.color)
         },
         {
             "name": "Invalid",
@@ -49,29 +86,53 @@ def get_token_colors() -> list:
         {
             "name": "Keyword, Storage",
             "scope": [
-                "keyword",
+                # "keyword",
+                "storage.control",
                 "storage.type",
-                "storage.modifier"
+                "storage.modifier",
+                "keyword.other",
             ],
             "settings": props(sh.keyword)
         },
         {
-            "name": "Operator, Misc",
+            "name": "CSS - Control Keyword",
+            "scope": [
+                "keyword.control.at-rule",
+            ],
+            "settings": props(sh.keyword_control_css)
+        },
+        {
+            "name": "Punctuation - Definition Keyword, Constant",
+            "scope": [
+                "punctuation.definition.keyword",
+                "punctuation.definition.constant",
+            ],
+            "settings": props(sh.punctuation_definition_keyword)
+        },
+        {
+            "name": "Control Flow Keyword",
             "scope": [
                 "keyword.control",
-                "constant.other.color",
+            ],
+            "settings": props(sh.keyword_control)
+        },
+        {
+            "name": "Operator, Misc",
+            "scope": [
+                # "constant.other.color",
                 # "punctuation",
                 "meta.tag",
                 "punctuation.definition.tag",
                 "punctuation.separator.inheritance.php",
-                "punctuation.definition.tag.html",
-                "punctuation.definition.tag.begin.html",
-                "punctuation.definition.tag.end.html",
                 "punctuation.section.embedded",
-                "punctuation.separator.annotation",
                 "punctuation.separator.pointer-access",
+                "punctuation.separator.key-value",
                 "keyword.other.template",
-                "keyword.other.substitution"
+                "keyword.other.substitution",
+                "keyword.operator",
+                "keyword.operator.assignment",
+                "source keyword.operator",
+                "meta.symbol",
             ],
             "settings": props(sh.operator)
         },
@@ -79,8 +140,26 @@ def get_token_colors() -> list:
             "name": "Punctuation",
             "scope": [
                 "punctuation",
+                "punctuation.definition.tag.html",
+                "punctuation.definition.tag.begin.html",
+                "punctuation.definition.tag.end.html",
             ],
             "settings": props(sh.punctuation)
+        },
+        {
+            "name": "Punctuation - Annotation Separator",
+            "scope": [
+                "punctuation.separator.annotation",
+                "entity.other.attribute-name.pseudo-element.css punctuation.definition.entity.css"
+            ],
+            "settings": props(sh.punctuation_annotation)
+        },
+        {
+            "name": "Punctuation - Entity Definition",
+            "scope": [
+                "punctuation.definition.entity",
+            ],
+            "settings": props(sh.punctuation_definition_entity)
         },
         {
             "name": "Tag",
@@ -98,9 +177,11 @@ def get_token_colors() -> list:
                 "meta.function entity.name.function",
                 "source meta.function entity.name.function",
                 "meta.function-call",
+                "source meta.function-call",
                 "variable.function",
                 "support.function",
-                "keyword.other.special-method"
+                "keyword.other.special-method",
+                "entity.name.method.js"
             ],
             "settings": props(sh.function)
         },
@@ -126,10 +207,11 @@ def get_token_colors() -> list:
                 "constant.language",
                 "support.constant",
                 "constant.character",
+                "constant.other",
                 "constant.escape",
-                "keyword.other.unit",
                 "constant.other.placeholder",
                 "source constant.other.placeholder",
+                "entity.other.keyframe-offset",
                 # "keyword.other"
             ],
             "settings": props(sh.constant)
@@ -142,12 +224,11 @@ def get_token_colors() -> list:
             "settings": props(sh.parameter)
         },
         {
-            "name": "String, Symbols, Inherited Class, Markup Heading",
+            "name": "String, Symbols, Markup Heading",
             "scope": [
                 "string",
                 "constant.other.symbol",
                 "constant.other.key",
-                "entity.other.inherited-class",
                 "markup.heading",
                 "markup.inserted.git_gutter",
                 "meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
@@ -169,6 +250,7 @@ def get_token_colors() -> list:
                 "support.class",
                 "support.other.namespace.use.php",
                 "meta.use.php",
+                "entity.other.inherited-class",
                 "support.other.namespace.php",
                 "markup.changed.git_gutter",
                 "support.type.sys-types"
@@ -178,7 +260,8 @@ def get_token_colors() -> list:
         {
             "name": "Entity Types",
             "scope": [
-                "support.type"
+                "support.type",
+                "keyword.type"
             ],
             "settings": props(sh._type)
         },
@@ -190,9 +273,17 @@ def get_token_colors() -> list:
                 "source.scss support.type.property-name",
                 "source.less support.type.property-name",
                 "source.stylus support.type.property-name",
-                "source.postcss support.type.property-name"
+                "source.postcss support.type.property-name",
+                "support.type.vendored.property-name"
             ],
-            "settings": props(sh._type)
+            "settings": props(sh.property_css)
+        },
+        {
+            "name": "CSS Unit",
+            "scope": [
+                "keyword.other.unit",
+            ],
+            "settings": props(sh.keyword_unit_css)
         },
         {
             "name": "Sub-methods",
@@ -211,29 +302,19 @@ def get_token_colors() -> list:
             "settings": props(sh.reference)
         },
         {
-            "name": "entity.name.method.js",
-            "scope": [
-                "entity.name.method.js"
-            ],
-            "settings": {
-                "fontStyle": "italic",
-                "foreground": sh.function[0]
-            }
-        },
-        {
             "name": "meta.method.js",
             "scope": [
                 "meta.class-method.js entity.name.function.js",
-                "variable.function.constructor"
+                "variable.function.constructor",
             ],
             "settings": props(sh.function)
         },
         {
             "name": "Attributes",
             "scope": [
-                "entity.other.attribute-name"
+                "entity.other.attribute-name",
             ],
-            "settings": props(sh.keyword)
+            "settings": props(sh.attribute)
         },
         {
             "name": "HTML Attributes",
@@ -241,17 +322,14 @@ def get_token_colors() -> list:
                 "text.html.basic entity.other.attribute-name.html",
                 "text.html.basic entity.other.attribute-name"
             ],
-            "settings": {
-                "fontStyle": "italic",
-                "foreground": sh._class[0]
-            }
+            "settings": props(sh.attribute)
         },
         {
             "name": "CSS Classes",
             "scope": [
                 "entity.other.attribute-name.class"
             ],
-            "settings": props(sh._class)
+            "settings": props(sh._class_css)
         },
         {
             "name": "CSS ID's",
@@ -312,10 +390,7 @@ def get_token_colors() -> list:
                 "tag.decorator.js entity.name.tag.js",
                 "tag.decorator.js punctuation.definition.tag.js"
             ],
-            "settings": {
-                "fontStyle": "italic",
-                "foreground": sh.function[0]
-            }
+            "settings": props(sh.decorator)
         },
         {
             "name": "Decorator Definition Punctuation",
@@ -329,10 +404,7 @@ def get_token_colors() -> list:
             "scope": [
                 "source.js constant.other.object.key.js string.unquoted.label.js"
             ],
-            "settings": {
-                "fontStyle": "italic",
-                "foreground": sh.invalid[0]
-            }
+            "settings": props(sh.bind_operator)
         },
         {
             "name": "JSON Key",
@@ -345,9 +417,10 @@ def get_token_colors() -> list:
             "name": "Markdown - Plain",
             "scope": [
                 "text.html.markdown",
+                "text.html.jinja",
                 "punctuation.definition.list_item.markdown"
             ],
-            "settings": props(sh.variable)
+            "settings": props(sh.plain_text)
         },
         {
             "name": "Markdown - Markup Raw Inline",
@@ -370,17 +443,21 @@ def get_token_colors() -> list:
                 "markup.heading | markup.heading entity.name",
                 "markup.heading.markdown punctuation.definition.heading.markdown"
             ],
-            "settings": props(sh.string)
+            "settings": props(sh.heading)
+        },
+        {
+            "name": "Markup - Section",
+            "scope": [
+                "entity.name.section"
+            ],
+            "settings": props(sh.section)
         },
         {
             "name": "Markup - Italic",
             "scope": [
                 "markup.italic"
             ],
-            "settings": {
-                "fontStyle": "italic",
-                "foreground": sh.tag[0]
-            }
+            "settings": props(sh.italic)
         },
         {
             "name": "Markup - Bold",
@@ -388,10 +465,7 @@ def get_token_colors() -> list:
                 "markup.bold",
                 "markup.bold string"
             ],
-            "settings": {
-                "fontStyle": "bold",
-                "foreground": sh.tag[0]
-            }
+            "settings": props(sh.bold_italic)
         },
         {
             "name": "Markup - Bold-Italic",
@@ -403,20 +477,14 @@ def get_token_colors() -> list:
                 "markup.italic markup.bold string",
                 "markup.quote markup.bold string"
             ],
-            "settings": {
-                "fontStyle": "bold",
-                "foreground": sh.tag[0]
-            }
+            "settings": props(sh.bold_italic)
         },
         {
             "name": "Markup - Underline",
             "scope": [
                 "markup.underline"
             ],
-            "settings": {
-                "fontStyle": "underline",
-                "foreground": sh.constant[0]
-            }
+            "settings": props(sh.link)
         },
         {
             "name": "Markdown - Blockquote",
@@ -439,7 +507,7 @@ def get_token_colors() -> list:
             "scope": [
                 "string.other.link.title.markdown"
             ],
-            "settings": props(sh.function)
+            "settings": props(sh.link_title)
         },
         {
             "name": "Markdown - Link Description",
@@ -493,14 +561,39 @@ def get_token_colors() -> list:
             "settings": props(sh.comment)
         },
         {
+            "name": "Markdown - Fenced Code Block",
+            "scope": [
+                "fenced_code.block.language.markdown",
+            ],
+            "settings": props(sh.code_block)
+        },
+        {
+            "name": "Markdown - Fenced Code Block Punctuation",
+            "scope": [
+                "punctuation.definition.markdown",
+            ],
+            "settings": props(sh.code_block_definition_punctuation)
+        },
+        {
+            "name": "Markdown - Raw Definition Punctuation",
+            "scope": [
+                "punctuation.definition.raw",
+            ],
+            "settings": props(sh.raw_definition_punctuation)
+        },
+        {
+            "name": "Markdown - Raw String",
+            "scope": [
+                "markup.inline.raw.string",
+            ],
+            "settings": props(sh.raw_string)
+        },
+        {
             "name": "Markdown - Separator",
             "scope": [
                 "meta.separator"
             ],
-            "settings": {
-                "fontStyle": "bold",
-                "foreground": sh.comment[0]
-            }
+            "settings": props(sh.separator)
         },
         {
             "name": "Markup - Table",
@@ -512,15 +605,21 @@ def get_token_colors() -> list:
     ]
 
 
-def get_semantic_token_colors() -> dict:
-    sh = DebugSyntaxHighlitingSystem()
+def get_semantic_token_colors(sh_system) -> dict:
+    sh = get_syntax_highlighting_system(sh_system)
     
     return {
         "variable.declaration": {
+            "foreground": sh.variable_declaration[0],
+        },
+        "variable.defaultLibrary": {
             "foreground": sh.variable[0],
         },
-        # "property.declaration": {
+        # "property": {
         #     "foreground": sh.variable[0],
+        # },
+        # "property.declaration": {
+        #     "foreground": sh.variable_declaration[0],
         # },
         "property.decorator": {
             "foreground": sh.decorator[0],
@@ -531,9 +630,9 @@ def get_semantic_token_colors() -> dict:
         "selfParameter.declaration": {
             "foreground": sh.reference[0],
         },
-        "module": {
-            "foreground": sh.module[0],
-        },
+        # "module": {
+        #     "foreground": sh.module[0],
+        # },
         "class": {
             "foreground": sh._class[0],
         },
@@ -546,8 +645,14 @@ def get_semantic_token_colors() -> dict:
         "class.decorator.builtin": {
             "foreground": sh.decorator[0],
         },
+        "class.typeHint.builtin": {
+            "foreground": sh._type[0],
+        },
         "function": {
             "foreground": sh.function[0],
+        },
+        "function.decorator": {
+            "foreground": sh.decorator[0],
         },
         "method": {
             "foreground": sh.function[0],
@@ -555,27 +660,20 @@ def get_semantic_token_colors() -> dict:
         "parameter": {
             "foreground": sh.parameter[0],
         },
-        # "builtinConstant": {
-        #     "foreground": sh.purple[0],
-        # },
-        # "variable.defaultLibrary": {
-        #     "foreground": sh.purple[0],
-        # },
+        "builtinConstant": {
+            "foreground": sh.constant[0],
+        },
     }
 
 
-def get_theme(name:str) -> dict:
+def get_theme(name: str, sh_system: str, bc: str = "styx") -> dict:
+    ui_colors = get_ui_colors()
+    ui_colors.update(get_bracket_colors(bc))
     return {
         "name": name,
         "$schema": "vscode://schemas/color-theme",
         "semanticHighlighting": True,
-        "colors": get_ui_colors(),
-        "semanticTokenColors": get_semantic_token_colors(),
-        "tokenColors": get_token_colors(),
+        "colors": ui_colors,
+        "semanticTokenColors": get_semantic_token_colors(sh_system),
+        "tokenColors": get_token_colors(sh_system),
     }
-
-theme = json.dumps(get_theme("Styx"), indent=4)
-path = r"./themes/Styx-color-theme.json"
-
-with open(file=path, mode="w") as jsonfile:
-    jsonfile.write(theme)

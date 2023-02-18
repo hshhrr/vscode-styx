@@ -1,0 +1,51 @@
+{
+  "name": "styx",
+  "displayName": "Styx",
+  "description": "Pitch Black theme for Visual Studio Code.",
+  "version": "0.2.6",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Styx",
+        "uiTheme": "vs-dark",
+        "path": "./themes/styx-color-theme.json"
+      },
+      {
+        "label": "Styx+",
+        "uiTheme": "vs-dark",
+        "path": "./themes/styx-plus-color-theme.json"
+      },
+      {
+        "label": "Styx Dracula",
+        "uiTheme": "vs-dark",
+        "path": "./themes/styx-dracula-color-theme.json"
+      },
+      {
+        "label": "Styx Fleet",
+        "uiTheme": "vs-dark",
+        "path": "./themes/styx-fleet-color-theme.json"
+      },
+      {
+        "label": "Styx Material",
+        "uiTheme": "vs-dark",
+        "path": "./themes/styx-material-color-theme.json"
+      },
+      {
+        "label": "Styx Monokai",
+        "uiTheme": "vs-dark",
+        "path": "./themes/styx-monokai-color-theme.json"
+      },
+      {
+        "label": "Styx VSCode",
+        "uiTheme": "vs-dark",
+        "path": "./themes/styx-vscode-color-theme.json"
+      }
+    ]
+  }
+}
