@@ -1,8 +1,13 @@
 {
   "name": "styx",
   "displayName": "Styx",
+  "icon": "assets/styx.png",
   "description": "Pitch Black theme for Visual Studio Code.",
-  "version": "0.2.6",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hshhrr/vscode-styx"
+  },
+  "version": "0.2.7",
   "engines": {
     "vscode": "^1.75.0"
   },
