@@ -1,19 +1,37 @@
 # Styx for VS Code
-A dark color theme for Visual Studio Code with a full black UI.
 
-![styx-preview](https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/styx-preview.png?raw=true)
+<div align="center">
+	![styx-preview](https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-preview.png?raw=true)
+	A dark color theme for Visual Studio Code with a full black UI.
+</div>
 
-![styx-plus-preview](https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/styx-plus-preview.png?raw=true)
+<div align="center">
+	![styx-preview](https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-preview.png?raw=true)
+</div>
 
-![styx-dracula-preview](https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/styx-dracula-preview.png?raw=true)
+<div align="center">
+	![styx-plus-preview](https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-plus-preview.png?raw=true)
+</div>
 
-![styx-fleet-preview](https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/styx-fleet-preview.png?raw=true)
+<div align="center">
+	![styx-dracula-preview](https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-dracula-preview.png?raw=true)
+</div>
 
-![styx-material-preview](https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/styx-material-preview.png?raw=true)
+<div align="center">
+	![styx-fleet-preview](https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-fleet-preview.png?raw=true)
+</div>
 
-![styx-monokai-preview](https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/styx-monokai-preview.png?raw=true)
+<div align="center">
+	![styx-material-preview](https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-material-preview.png?raw=true)
+</div>
 
-![styx-vscode-preview](https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/styx-vscode-preview.png?raw=true)
+<div align="center">
+	![styx-monokai-preview](https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-monokai-preview.png?raw=true)
+</div>
+
+<div align="center">
+	![styx-vscode-preview](https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-vscode-preview.png?raw=true)
+</div>
 
 ### Install
 ```powershell
