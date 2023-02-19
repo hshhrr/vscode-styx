@@ -80,7 +80,7 @@ A dark color theme for Visual Studio Code with a full black UI. -->
 - `Product Icon theme` - [Carbon Product Icons](https://marketplace.visualstudio.com/items?itemName=antfu.icons-carbon)
 
 ### Installation
-Theme can be installed from it's Visual Studio Marketplace page, or just download the packaged extension from github releases and use the following snippet to install.
+Theme can be installed from it's Visual Studio Marketplace page - [[Styx](https://marketplace.visualstudio.com/items?itemName=hshhrr.styx)], or just download the packaged extension from github releases and use the following snippet to install.
 ```powershell
 code --install-extension styx-1.0.0.vsix
 ```
