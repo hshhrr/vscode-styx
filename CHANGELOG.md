@@ -1,9 +1,5 @@
 # Change Log
 
-All notable changes to the "styx" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
+## Release - 1.0.0-20230219
 
 - Initial release
