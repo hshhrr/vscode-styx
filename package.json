@@ -1,18 +1,39 @@
 {
   "name": "styx",
   "displayName": "Styx",
-  "icon": "assets/styx.png",
   "description": "Pitch Black theme for Visual Studio Code.",
+  "publisher": "hshhrr",
+  "version": "1.0.0-20230219",
+  "icon": "assets/styx.png",
+  "galleryBanner": {
+    "color": "#0D1117",
+    "theme": "dark"
+  },
+  "license" : "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/hshhrr/vscode-styx/issues",
+    "email": "hasan.shahrier.27@gmail.com"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hshhrr/vscode-styx"
+    "url": "https://github.com/hshhrr/vscode-styx.git"
   },
-  "version": "0.2.7",
   "engines": {
     "vscode": "^1.75.0"
   },
   "categories": [
     "Themes"
+  ],
+  "keywords": [
+    "styx",
+    "dracula",
+    "fleet",
+    "monokai",
+    "material",
+    "vscode",
+    "dark",
+    "black",
+    "pitch black"
   ],
   "contributes": {
     "themes": [
