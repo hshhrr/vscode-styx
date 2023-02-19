@@ -64,9 +64,10 @@ A dark color theme for Visual Studio Code with a full black UI. -->
 <br/>
 
 `Styx VSCode` - [VSCode Drak+ v2](https://code.visualstudio.com/) inspired variant
+
 <div align="center">
 	<img alt="styx-vscode-preview" src="https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-vscode-preview.png?raw=true">
-	<em>image_caption</em>
+	<!-- <em>image_caption</em> -->
 </div>
 
 <br/>
