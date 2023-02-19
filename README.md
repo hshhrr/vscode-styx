@@ -3,6 +3,8 @@
 <!-- ![styx-preview](https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-preview.png?raw=true)
 A dark color theme for Visual Studio Code with a full black UI. -->
 
+<br/>
+
 <div align="center">
 	<img alt="styx-icon" style="width:128px;height:128px;" src="https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/styx.png?raw=true">
 </div>
@@ -19,7 +21,7 @@ A dark color theme for Visual Studio Code with a full black UI. -->
 
 ## Available Variants
 
-<br/>
+<!-- <br/> -->
 
 `Styx` - Default variant
 <div align="center">
@@ -68,11 +70,12 @@ A dark color theme for Visual Studio Code with a full black UI. -->
 	<img alt="styx-vscode-preview" src="https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-vscode-preview.png?raw=true">
 </div>
 
-<br/><br/>
+<!-- <br/><br/> -->
+<br/>
 
 ## Appendix
 
-<br/>
+<!-- <br/> -->
 
 ### Additional Resources
 - `Font` - [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
