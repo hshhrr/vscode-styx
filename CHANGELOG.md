@@ -7,5 +7,6 @@
 ### Added
 
 - Themed UI.
+- 7 Syntax Highlighting Schemes (Styx, Styx+, Styx Dracula, Styx Fleet, Styx Material, Styx Monokai, Styx VSCode)
 - Syntax Highlighting support for Python, C, C++, Julia, Java, Kotlin (Partial), JavaScript and TypeScript.
 - Syntax Highlighting support for HTML, CSS and Markdown.
