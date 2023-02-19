@@ -82,5 +82,5 @@ A dark color theme for Visual Studio Code with a full black UI. -->
 ### Installation
 Theme can be installed from it's Visual Studio Marketplace page, or just download the packaged extension from github releases and use the following snippet to install.
 ```powershell
-code --install-extension styx-1.0.0-20230219.vsix
+code --install-extension styx-1.0.0.vsix
 ```
