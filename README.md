@@ -4,11 +4,15 @@
 A dark color theme for Visual Studio Code with a full black UI. -->
 
 <div align="center">
-	<img alt="styx-icon" src="https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/styx.png?raw=true">
+	<img alt="styx-icon" style="width:128px;height:128px;" src="https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/styx.png?raw=true">
 </div>
 
+<br/>
+
 <p align="center">
-	A dark color theme for Visual Studio Code with a full black UI.
+	<i>
+		A dark color theme for Visual Studio Code with a full black UI.
+	</i>
 </p>
 
 <br/><br/>
@@ -17,14 +21,14 @@ A dark color theme for Visual Studio Code with a full black UI. -->
 
 <br/>
 
-`Styx` - Default Variant
+`Styx` - Default variant
 <div align="center">
 	<img alt="styx-preview" src="https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-preview.png?raw=true">
 </div>
 
 <br/>
 
-`Styx+` - Default Variant with colored brackets
+`Styx+` - Default variant with colored brackets
 <div align="center">
 	<img alt="styx-plus-preview" src="https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-plus-preview.png?raw=true">
 </div>
@@ -64,9 +68,21 @@ A dark color theme for Visual Studio Code with a full black UI. -->
 	<img alt="styx-vscode-preview" src="https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-vscode-preview.png?raw=true">
 </div>
 
+<br/><br/>
+
+## Appendix
+
 <br/>
 
-### Install
+### Additional Resources
+- `Font` - [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+- `File Icon Theme` - [Quill Icons](https://marketplace.visualstudio.com/items?itemName=cdonohue.quill-icons)
+- `Product Icon theme` - [Carbon Product Icons](https://marketplace.visualstudio.com/items?itemName=antfu.icons-carbon)
+
+<br/>
+
+### Installation
+Theme can be installed from it's Visual Studio Marketplace page, or just download the packaged extension from github releases and use the following snippet to install.
 ```powershell
 code --install-extension styx-0.0.1.vsix
 ```
