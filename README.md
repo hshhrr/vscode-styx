@@ -82,7 +82,7 @@ A dark color theme for Visual Studio Code with a full black UI. -->
 - `File Icon Theme` - [Quill Icons](https://marketplace.visualstudio.com/items?itemName=cdonohue.quill-icons)
 - `Product Icon theme` - [Carbon Product Icons](https://marketplace.visualstudio.com/items?itemName=antfu.icons-carbon)
 
-<br/>
+<!-- <br/> -->
 
 ### Installation
 Theme can be installed from it's Visual Studio Marketplace page, or just download the packaged extension from github releases and use the following snippet to install.
