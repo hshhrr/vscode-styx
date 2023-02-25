@@ -3,10 +3,10 @@
   "displayName": "Styx",
   "description": "Pitch Black theme for Visual Studio Code.",
   "publisher": "hshhrr",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "icon": "assets/styx.png",
   "galleryBanner": {
-    "color": "#FFFFFF",
+    "color": "#0D1117",
     "theme": "dark"
   },
   "license" : "SEE LICENSE IN LICENSE",
