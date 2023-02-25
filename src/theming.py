@@ -1,6 +1,6 @@
 import sys, inspect
 from common import *
-from bracket_colors import *
+from theming_extras import *
 from syntax_highlighting_systems import *
 
 
@@ -11,7 +11,7 @@ props = lambda h : dict(zip(["foreground", "fontStyle"], [x for x in h if x is n
 sh_systems = [(name, obj) for name, obj in inspect.getmembers(sys.modules["syntax_highlighting_systems"]) if inspect.isclass(obj)]
 
 # List of function names for Bracket Coloring
-bcf = [(name, obj) for name, obj in inspect.getmembers(sys.modules["bracket_colors"]) if inspect.isfunction(obj)]
+bcf = [(name, obj) for name, obj in inspect.getmembers(sys.modules["theming_extras"]) if inspect.isfunction(obj)]
 
 
 def get_syntax_highlighting_system(sh_system):
@@ -24,12 +24,13 @@ def get_syntax_highlighting_system(sh_system):
 
 
 def get_bracket_colors(bc):
-    common = "_bracket_colors"
+    # Brackets and others
+    common = "_extra_colors"
     for s, func in bcf:
         if common in s and s.split(common)[0].lower() == bc.lower():
             return func()
             
-    return debug_bracket_colors()
+    return debug_extra_colors()
 
 
 def get_token_colors(sh_system: str) -> list:
