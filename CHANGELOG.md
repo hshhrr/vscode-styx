@@ -16,7 +16,7 @@
 - Debug Icon colors.
 - Fixed Input Control related colors.
 - Fixed List Hover colors.
-- Styx and Styx+ Syntax Highligthing colors.
+- Styx and Styx+ Syntax Highlighting colors.
 
 ### Removed in 1.1.0
 
