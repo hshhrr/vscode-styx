@@ -3,7 +3,7 @@
 <!-- ![styx-preview](https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-preview.png?raw=true)
 A dark color theme for Visual Studio Code with a full black UI. -->
 
-<!-- <br/> -->
+<br/>
 
 <div align="center">
 	<img alt="styx-icon" style="width:256px;height:256px;" src="https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/styx.png?raw=true">
