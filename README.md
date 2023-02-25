@@ -23,6 +23,8 @@ A dark color theme for Visual Studio Code with a full black UI. -->
 
 <br/><br/>
 
+<img style="border-radius:16%" src="https://via.placeholder.com/32/FFFFFF/FFFFFFF/">
+
 ## Available Variants
 
 `Styx` - Default variant
