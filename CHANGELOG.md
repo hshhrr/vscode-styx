@@ -1,8 +1,26 @@
 # Change Log
 
+## Release - 1.2.0
+
+- 3rd public release.
+
+### Added in 1.2.0
+
+- None.
+
+### Updated in 1.2.0
+
+- Fixed Notification Center colors.
+- Fixed Notification Toast colors.
+- Fixed Scrollbar colors.
+
+### Removed in 1.2.0
+
+- None.
+
 ## Release - 1.1.0
 
-- 2nd Public release.
+- 2nd public release.
 
 ### Added in 1.1.0
 

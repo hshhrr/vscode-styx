@@ -27,7 +27,7 @@ class BaseColors:
     fg2: str = get_shade(fg0, 30, 30)
     
     # Primary Accent
-    pa0: str = "#64FFDA"                #   Material - Teal A200
+    pa0: str = "#91F2DA"                #   HSV -> 165°, 40%, 95%
     pa1: str = get_shade(pa0, 80, 40)
     pa2: str = get_shade(pa0, 80, 20)
     

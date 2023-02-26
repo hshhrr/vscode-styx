@@ -77,9 +77,9 @@ def get_ui_colors() -> dict:
 
         # <<- Scrollbar control ->>
         # "scrollbar.shadow": bc.red,
-        "scrollbarSlider.activeBackground": bc.bg1,
+        "scrollbarSlider.activeBackground": bc.bg1 + "90",
         "scrollbarSlider.background": bc.bg2 + "90",
-        "scrollbarSlider.hoverBackground": bc.bg1,
+        "scrollbarSlider.hoverBackground": bc.bg1 + "90",
 
         # <<- Badge ->>
         "badge.foreground": bc.pa0,
@@ -94,7 +94,7 @@ def get_ui_colors() -> dict:
         "list.activeSelectionIconForeground": bc.fg0,
         "list.dropBackground": bc.bg1,
         "list.focusBackground": bc.bg0,
-        "list.focusForeground": bc.pa0,
+        "list.focusForeground": bc.fg0,
         # "list.focusHighlightForeground": bc.red,
         # "list.focusOutline": bc.red,
         # "list.focusAndSelectionOutline": bc.red,
@@ -478,13 +478,13 @@ def get_ui_colors() -> dict:
         "commandCenter.inactiveForeground": bc.fg1,
 
         # <<- Notification colors ->>
-        "notificationCenter.border": bc.bg0,
+        "notificationCenter.border": bc.bg2,
         "notificationCenterHeader.foreground": bc.fg1,
         "notificationCenterHeader.background": bc.bg1,
-        "notificationToast.border": bc.bg0,
+        "notificationToast.border": bc.bg2,
         "notifications.foreground": bc.fg1,
         "notifications.background": bc.bg1,
-        "notifications.border": bc.bg1,
+        "notifications.border": bc.bg2,
         "notificationLink.foreground": bc.sa0,
         "notificationsErrorIcon.foreground": bc.ea0,
         "notificationsWarningIcon.foreground": bc.wa0,
@@ -740,9 +740,9 @@ def get_ui_colors() -> dict:
         # "notebook.selectedCellBackground": bc.red,
         # "notebook.selectedCellBorder": bc.red,
         # "notebook.symbolHighlightBackground": bc.red,
-        "notebookScrollbarSlider.activeBackground": bc.bg1,
+        "notebookScrollbarSlider.activeBackground": bc.bg1 + "90",
         "notebookScrollbarSlider.background": bc.bg2 + "90",
-        "notebookScrollbarSlider.hoverBackground": bc.bg1,
+        "notebookScrollbarSlider.hoverBackground": bc.bg1 + "90",
         # "notebookStatusErrorIcon.foreground": bc.red,
         # "notebookStatusRunningIcon.foreground": bc.red,
         # "notebookStatusSuccessIcon.foreground": bc.red,
