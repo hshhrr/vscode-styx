@@ -1,5 +1,22 @@
 # Change Log
 
+## Release - 1.3.0
+
+- 4th public release.
+
+### Added in 1.3.0
+
+- None.
+
+### Updated in 1.3.0
+
+- Fixed border colors across the whole UI.
+- Fixed Statusbar background color for Debugging.
+
+### Removed in 1.3.0
+
+- None.
+
 ## Release - 1.2.0
 
 - 3rd public release.

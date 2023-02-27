@@ -6,16 +6,16 @@ def get_ui_colors() -> dict:
         # https://code.visualstudio.com/api/references/theme-color
         
         # <<- Base colors ->>
-        "focusBorder": bc.bg0,
+        "focusBorder": bc.bg2,
         "foreground": bc.fg0,
         "disabledForeground": bc.fg1 + "90",
-        "widget.border": bc.bg1,
-        # "widget.shadow": bc.bg0 + "10",
+        "widget.border": bc.bg2,
+        "widget.shadow": bc.bg0,
         # "selection.background": bc.red,
         "descriptionForeground": bc.fg1,
         "errorForeground": bc.ea0,
         "icon.foreground": bc.fg1,
-        "sash.hoverBorder": bc.bg1,
+        "sash.hoverBorder": bc.bg2,
         
         # <<- Window border ->>
         "window.activeBorder": bc.pa1,
@@ -32,7 +32,7 @@ def get_ui_colors() -> dict:
 
         # <<- Action colors ->>
         "toolbar.hoverBackground": bc.bg1,
-        "toolbar.hoverOutline": bc.bg1,
+        "toolbar.hoverOutline": bc.bg0,
         "toolbar.activeBackground": bc.bg0,
 
         # <<- Button control ->>
@@ -53,7 +53,7 @@ def get_ui_colors() -> dict:
         # <<- Dropdown control ->>
         "dropdown.background": bc.bg1,
         "dropdown.listBackground": bc.bg1,
-        "dropdown.border": bc.bg0,
+        "dropdown.border": bc.bg2,
         "dropdown.foreground": bc.fg0,
 
         # <<- Input control ->>
@@ -118,7 +118,7 @@ def get_ui_colors() -> dict:
         # "list.deemphasizedForeground": bc.red,
         "tree.indentGuidesStroke": bc.bg1,
         "tree.inactiveIndentGuidesStroke": bc.bg1,
-        "tree.tableColumnsBorder": bc.bg1,
+        "tree.tableColumnsBorder": bc.bg2,
         "tree.tableOddRowsBackground": bc.bg1,
 
         # <<- Activity Bar ->>
@@ -126,7 +126,7 @@ def get_ui_colors() -> dict:
         "activityBar.dropBorder": bc.bg2,
         "activityBar.foreground": bc.fg0,
         "activityBar.inactiveForeground": bc.fg2,
-        "activityBar.border": bc.bg1,
+        "activityBar.border": bc.bg2,
         "activityBarBadge.background": bc.pa2,
         "activityBarBadge.foreground": bc.pa0,
         "activityBar.activeBorder": bc.pa0,
@@ -136,12 +136,12 @@ def get_ui_colors() -> dict:
         # <<- Side Bar ->>
         "sideBar.background": bc.bg0,
         "sideBar.foreground": bc.fg1,
-        "sideBar.border": bc.bg1,
+        "sideBar.border": bc.bg2,
         "sideBar.dropBackground": bc.bg1,
         "sideBarTitle.foreground": bc.fg0,
         "sideBarSectionHeader.background": bc.bg0,
         "sideBarSectionHeader.foreground": bc.fg0,
-        "sideBarSectionHeader.border": bc.bg1,
+        "sideBarSectionHeader.border": bc.bg2,
 
         # <<- Minimap ->>
         # "minimap.findMatchHighlight": bc.red,
@@ -159,12 +159,12 @@ def get_ui_colors() -> dict:
         "minimapGutter.deletedBackground": bc.ea1,
 
         # <<- Editor Groups & Tabs ->>
-        "editorGroup.border": bc.bg1,
+        "editorGroup.border": bc.bg2,
         "editorGroup.dropBackground": bc.bg1,
         "editorGroupHeader.noTabsBackground": bc.bg0,
         "editorGroupHeader.tabsBackground": bc.bg0,
-        "editorGroupHeader.tabsBorder": bc.bg1,
-        "editorGroupHeader.border": bc.bg0,
+        "editorGroupHeader.tabsBorder": bc.bg2,
+        "editorGroupHeader.border": bc.bg2,
         "editorGroup.emptyBackground": bc.bg1,
         # "editorGroup.focusedEmptyBorder": bc.red,
         # "editorGroup.dropIntoPromptForeground": bc.red,
@@ -174,12 +174,12 @@ def get_ui_colors() -> dict:
         "tab.unfocusedActiveBackground": bc.bg0,
         "tab.activeForeground": bc.fg0,
         "tab.unfocusedActiveForeground": bc.fg0,
-        "tab.border": bc.bg1,
+        "tab.border": bc.bg2,
         "tab.activeBorder": bc.bg0,
         "tab.unfocusedActiveBorder": bc.bg0,
         "tab.activeBorderTop": bc.pa0,
         "tab.unfocusedActiveBorderTop": bc.pa0,
-        "tab.lastPinnedBorder": bc.bg1,
+        "tab.lastPinnedBorder": bc.bg2,
         "tab.inactiveBackground": bc.bg0,
         "tab.unfocusedInactiveBackground": bc.bg0,
         "tab.inactiveForeground": bc.fg1,
@@ -324,7 +324,7 @@ def get_ui_colors() -> dict:
         # "diffEditor.insertedTextBorder": bc.red,
         "diffEditor.removedTextBackground": bc.ea2 + "90",
         # "diffEditor.removedTextBorder": bc.red,
-        "diffEditor.border": bc.bg1,
+        "diffEditor.border": bc.bg2,
         "diffEditor.diagonalFill": bc.sa0 + "20",
         "diffEditor.insertedLineBackground": bc.pa2 + "70",
         "diffEditor.removedLineBackground": bc.ea2 + "70",
@@ -411,7 +411,7 @@ def get_ui_colors() -> dict:
 
         # <<- Panel colors ->>
         "panel.background": bc.bg0,
-        "panel.border": bc.bg1,
+        "panel.border": bc.bg2,
         "panel.dropBorder": bc.bg2,
         "panelTitle.activeBorder": bc.pa0,
         "panelTitle.activeForeground": bc.fg0,
@@ -426,13 +426,13 @@ def get_ui_colors() -> dict:
         # <<- Status Bar colors ->>
         "statusBar.background": bc.bg0,
         "statusBar.foreground": bc.fg1,
-        "statusBar.border": bc.bg1,
-        "statusBar.debuggingBackground": bc.da1,
+        "statusBar.border": bc.bg2,
+        "statusBar.debuggingBackground": bc.da2,
         "statusBar.debuggingForeground": bc.da0,
-        "statusBar.debuggingBorder": bc.bg1,
+        "statusBar.debuggingBorder": bc.bg2,
         "statusBar.noFolderForeground": bc.sa0,
         "statusBar.noFolderBackground": bc.sa2,
-        "statusBar.noFolderBorder": bc.bg1,
+        "statusBar.noFolderBorder": bc.bg2,
         # "statusBarItem.activeBackground": bc.bg0,
         # "statusBarItem.hoverBackground": bc.bg0,
         # "statusBarItem.prominentForeground": bc.bg0,
@@ -453,7 +453,7 @@ def get_ui_colors() -> dict:
         "titleBar.activeForeground": bc.fg1,
         "titleBar.inactiveBackground": bc.bg0,
         "titleBar.inactiveForeground": bc.fg1,
-        "titleBar.border": bc.bg1,
+        "titleBar.border": bc.bg2,
 
         # <<- Menu Bar colors ->>
         "menubar.selectionForeground": bc.fg0,
@@ -464,17 +464,17 @@ def get_ui_colors() -> dict:
         "menu.selectionForeground": bc.fg0,
         "menu.selectionBackground": bc.bg0,
         "menu.selectionBorder": bc.bg0,
-        "menu.separatorBackground": bc.bg0,
-        "menu.border": bc.bg0,
+        "menu.separatorBackground": bc.bg2,
+        "menu.border": bc.bg2,
 
         # <<- Command Center colors ->>
         "commandCenter.foreground": bc.fg1,
         "commandCenter.background": bc.bg1,
-        "commandCenter.border": bc.bg0,
-        "commandCenter.activeForeground": bc.fg1,
+        "commandCenter.border": bc.bg2,
+        "commandCenter.activeForeground": bc.fg0,
         "commandCenter.activeBackground": bc.bg0,
-        "commandCenter.activeBorder": bc.bg1,
-        "commandCenter.inactiveBorder": bc.bg0,
+        "commandCenter.activeBorder": bc.bg2,
+        "commandCenter.inactiveBorder": bc.bg2,
         "commandCenter.inactiveForeground": bc.fg1,
 
         # <<- Notification colors ->>
@@ -511,7 +511,7 @@ def get_ui_colors() -> dict:
         # "extensionIcon.sponsorForeground": bc.red,
 
         # <<- Quick picker colors ->>
-        "pickerGroup.border": bc.bg0,
+        "pickerGroup.border": bc.bg2,
         # "pickerGroup.foreground": bc.fg0,
         "quickInput.background": bc.bg1,
         "quickInput.foreground": bc.fg1,
@@ -532,7 +532,7 @@ def get_ui_colors() -> dict:
 
         # <<- Integrated Terminal colors ->>
         "terminal.background": bc.bg0,
-        "terminal.border": bc.bg1,
+        "terminal.border": bc.bg2,
         "terminal.foreground": bc.fg0,
         "terminal.ansiBlack": bc.ansiBlack,
         "terminal.ansiBlue": bc.ansiBrightBlack,
@@ -569,7 +569,7 @@ def get_ui_colors() -> dict:
 
         # <<- Debug colors ->>
         "debugToolBar.background": bc.bg0,
-        "debugToolBar.border": bc.bg1,
+        "debugToolBar.border": bc.bg2,
         # "editor.stackFrameHighlightBackground": bc.red,
         # "editor.focusedStackFrameHighlightBackground": bc.red,
         # "editor.inlineValuesForeground": bc.red,
@@ -632,22 +632,22 @@ def get_ui_colors() -> dict:
         "settings.modifiedItemIndicator": bc.pa0,
         "settings.dropdownBackground": bc.bg1,
         "settings.dropdownForeground": bc.fg1,
-        "settings.dropdownBorder": bc.bg0,
-        "settings.dropdownListBorder": bc.bg0,
+        "settings.dropdownBorder": bc.bg2,
+        "settings.dropdownListBorder": bc.bg2,
         "settings.checkboxBackground": bc.pa2,
         "settings.checkboxForeground": bc.pa0,
         "settings.checkboxBorder": bc.pa2,
         "settings.rowHoverBackground": bc.bg1,
         "settings.textInputBackground": bc.bg1,
         "settings.textInputForeground": bc.fg1,
-        "settings.textInputBorder": bc.bg0,
+        "settings.textInputBorder": bc.bg2,
         "settings.numberInputBackground": bc.bg1,
         "settings.numberInputForeground": bc.fg1,
-        "settings.numberInputBorder": bc.bg0,
-        # "settings.focusedRowBackground": bc.red,
-        # "settings.focusedRowBorder": bc.red,
-        "settings.headerBorder": bc.bg1,
-        "settings.sashBorder": bc.bg1,
+        "settings.numberInputBorder": bc.bg2,
+        "settings.focusedRowBackground": bc.bg1,
+        "settings.focusedRowBorder": bc.bg2,
+        "settings.headerBorder": bc.bg2,
+        "settings.sashBorder": bc.bg2,
         # "settings.settingsHeaderHoverForeground": bc.red,
 
         # <<- Breadcrumbs colors ->>
@@ -724,7 +724,7 @@ def get_ui_colors() -> dict:
 
         # <<- Notebook colors ->>
         "notebook.editorBackground": bc.bg0,
-        "notebook.cellBorderColor": bc.bg1,
+        "notebook.cellBorderColor": bc.bg2,
         "notebook.cellHoverBackground": bc.bg0,
         # "notebook.cellInsertionIndicator": bc.red,
         # "notebook.cellStatusBarItemHoverBackground": bc.red,
