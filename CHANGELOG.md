@@ -1,5 +1,21 @@
 # Change Log
 
+## Release - 1.4.0
+
+- 5th public release.
+
+### Added in 1.4.0
+
+- Merge Conflict colors.
+
+### Updated in 1.4.0
+
+- None
+
+### Removed in 1.4.0
+
+- None.
+
 ## Release - 1.3.0
 
 - 4th public release.

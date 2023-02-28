@@ -23,68 +23,98 @@ A dark color theme for Visual Studio Code with a full black UI. -->
 
 <br/><br/>
 
+## Features
+
+### Implemented Theme Colors (UI)
+
+[x] Base colors
+
+
 ## Available Variants
 
-`Styx` - Default variant
-<div align="center">
+<figure align="center" class="image">
 	<img alt="styx-preview" src="https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-preview.png?raw=true">
-</div>
+  	<figcaption>Styx</figcaption>
+</figure>
 
-<br/>
-
-`Styx+` - Default variant with colored brackets
-<div align="center">
+<figure align="center" class="image">
 	<img alt="styx-plus-preview" src="https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-plus-preview.png?raw=true">
-</div>
+  	<figcaption>Styx+</figcaption>
+</figure>
 
-<br/>
-
-`Styx Dracula` - [Dracula Official](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula) inspired variant
-<div align="center">
+<figure align="center" class="image">
 	<img alt="styx-dracula-preview" src="https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-dracula-preview.png?raw=true">
-</div>
+  	<figcaption>Styx Dracula</figcaption>
+</figure>
 
-<br/>
-
-`Styx Fleet` - [JetBrains Fleet](https://www.jetbrains.com/fleet/) inspired variant
-<div align="center">
+<figure align="center" class="image">
 	<img alt="styx-fleet-preview" src="https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-fleet-preview.png?raw=true">
-</div>
+  	<figcaption>Styx Fleet</figcaption>
+</figure>
 
-<br/>
-
-`Styx Material` - [Material Theme](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme) inspired variant
-<div align="center">
+<figure align="center" class="image">
 	<img alt="styx-material-preview" src="https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-material-preview.png?raw=true">
-</div>
+  	<figcaption>Styx Material</figcaption>
+</figure>
 
-<br/>
-
-`Styx Monokai` - [Monokai Pro](https://marketplace.visualstudio.com/items?itemName=monokai.theme-monokai-pro-vscode) inspired variant
-<div align="center">
+<figure align="center" class="image">
 	<img alt="styx-monokai-preview" src="https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-monokai-preview.png?raw=true">
-</div>
+  	<figcaption>Styx Monokai</figcaption>
+</figure>
 
-<br/>
-
-`Styx VSCode` - [VSCode Drak+ v2](https://code.visualstudio.com/) inspired variant
-
-<div align="center">
+<figure align="center" class="image">
 	<img alt="styx-vscode-preview" src="https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/previews/styx-vscode-preview.png?raw=true">
-	<!-- <em>image_caption</em> -->
-</div>
+  	<figcaption>Styx VSCode</figcaption>
+</figure>
 
 <br/>
 
 ## Appendix
 
 ### Additional Resources
+
 - `Font` - [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
 - `File Icon Theme` - [Quill Icons](https://marketplace.visualstudio.com/items?itemName=cdonohue.quill-icons)
 - `Product Icon theme` - [Carbon Product Icons](https://marketplace.visualstudio.com/items?itemName=antfu.icons-carbon)
 
 ### Installation
-Theme can be installed from it's Visual Studio Marketplace page - [[Styx](https://marketplace.visualstudio.com/items?itemName=hshhrr.styx)], or just download the packaged extension from github releases and use the following snippet to install.
+
+3 ways to install the theme extension -
+
+- Theme can be installed from it's Visual Studio Marketplace page - [Styx](https://marketplace.visualstudio.com/items?itemName=hshhrr.styx).
+
+- Install the theme from command prompt using this command
+
 ```powershell
-code --install-extension styx-1.0.0.vsix
+ext install styx
 ```
+
+- Download the packaged extension from [GitHub releases](https://github.com/hshhrr/vscode-styx/releases) or Visual Studio Marketplace page - [Styx](https://marketplace.visualstudio.com/items?itemName=hshhrr.styx), and install using following command
+
+```powershell
+code --install-extension styx-1.4.0.vsix
+```
+
+### Inspirations
+
+This theme is inspired from a few great (some are age old at this point, some are new) themes or color schemes. You may want to check them out -
+
+- [Dracula Official](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
+
+- [Jetbrains Fleet Theme](https://marketplace.visualstudio.com/items?itemName=MichaelZhou.fleet-theme), [JetBrains Fleet](https://www.jetbrains.com/fleet/)
+
+- [Material Theme](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme)
+
+- [Monokai Pro](https://marketplace.visualstudio.com/items?itemName=monokai.theme-monokai-pro-vscode)
+
+- [VSCode Drak+ v2](https://code.visualstudio.com/)
+
+- [Min Theme](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.min-theme)
+
+- [Panda Theme](https://marketplace.visualstudio.com/items?itemName=tinkertrain.theme-panda)
+
+- [Ancient One Dark](https://marketplace.visualstudio.com/items?itemName=uetchy.ancient-one-dark)
+
+- [Moegi Theme](https://marketplace.visualstudio.com/items?itemName=ddiu8081.moegi-theme)
+
+- [Lotus Theme](https://plugins.jetbrains.com/plugin/14369-lotus-theme)

@@ -33,12 +33,12 @@ class BaseColors:
     pa2: str = get_shade(pa0, 80, 20)
     
     # Secondary Accent
-    sa0: str = hsv2hex(210, 50, 100)
-    sa1: str = get_shade(sa0, 80, 35)
-    sa2: str = get_shade(sa0, 80, 15)
+    sa0: str = hsv2hex(210, 40, 100)
+    sa1: str = get_shade(sa0, 80, 40)
+    sa2: str = get_shade(sa0, 80, 20)
     
     # Warning Accent
-    wa0: str = hsv2hex(45, 35, 100)
+    wa0: str = hsv2hex(55, 45, 100)
     wa1: str = get_shade(wa0, 80, 35)
     wa2: str = get_shade(wa0, 80, 15)
     
@@ -48,7 +48,7 @@ class BaseColors:
     da2: str = get_shade(da0, 60, 20)
     
     # Error Accent
-    ea0: str = hsv2hex(0, 50, 100)
+    ea0: str = hsv2hex(0, 55, 100)
     ea1: str = get_shade(ea0, 80, 35)
     ea2: str = get_shade(ea0, 80, 15)
     
