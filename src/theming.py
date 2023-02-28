@@ -386,6 +386,12 @@ def get_token_colors(sh_system: str) -> list:
             }
         },
         {
+			"scope": "markup.strikethrough",
+			"settings": {
+				"fontStyle": "strikethrough"
+			}
+		},
+        {
             "name": "Decorator",
             "scope": [
                 "tag.decorator.js entity.name.tag.js",
