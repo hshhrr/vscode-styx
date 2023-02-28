@@ -29,7 +29,7 @@ A dark color theme for Visual Studio Code with a full black UI. -->
 
 - [x] Base Colors
 - [x] Window border
-- [] Text colors
+- [ ] Text colors
 - [x] Action colors
 - [x] Button control
 - [x] Dropdown control
@@ -39,8 +39,9 @@ A dark color theme for Visual Studio Code with a full black UI. -->
 - [x] Lists and trees
 - [x] Activity Bar
 - [x] Side Bar
-- [x] Minimap
-- [x] Editor colors
+- [ ] Minimap
+- [x] Editor Groups & Tabs
+- [ ] Editor colors
 - [x] Diff editor colors
 - [x] Editor widget colors
 - [x] Peek view colors
@@ -49,26 +50,26 @@ A dark color theme for Visual Studio Code with a full black UI. -->
 - [x] Status Bar colors
 - [x] Title Bar colors
 - [x] Notification colors
-- [x] Banner colors
+- [ ] Banner colors
 - [x] Extensions colors
 - [x] Quick picker colors
 - [x] Keybinding label colors
 - [x] Keyboard shortcut table colors
 - [x] Integrated Terminal colors
-- [x] Debug colors
-- [x] Testing colors
+- [ ] Debug colors
+- [ ] Testing colors
 - [x] Welcome page colors
-- [x] Source Control colors
+- [ ] Source Control colors
 - [x] Git colors
 - [x] Settings Editor colors
 - [x] Breadcrumbs colors
-- [x] Snippets colors
+- [ ] Snippets colors
 - [x] Breadcrumbs colors
 - [x] Symbol Icon colors
 - [x] Debug Icons colors
 - [x] Notebook colors
-- [x] Chart colors
-- [x] Ports Colors
+- [ ] Chart colors
+- [ ] Ports Colors
 
 ## Available Variants
 
