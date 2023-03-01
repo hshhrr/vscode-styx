@@ -480,10 +480,13 @@
         {
             "name": "Keyword, Storage",
             "scope": [
+                "keyword",
                 "storage.control",
                 "storage.type",
                 "storage.modifier",
-                "keyword.other"
+                "keyword.other",
+                "keyword.assembly",
+                "keyword.assembly"
             ],
             "settings": {
                 "foreground": "#FF80AB"
@@ -511,7 +514,11 @@
         {
             "name": "Control Flow Keyword",
             "scope": [
-                "keyword.control"
+                "keyword.control",
+                "keyword.package",
+                "keyword.import",
+                "keyword.other.import",
+                "keyword.other.package"
             ],
             "settings": {
                 "foreground": "#FF80AB",

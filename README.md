@@ -145,11 +145,24 @@ A dark color theme for Visual Studio Code with a full black UI. -->
 - [x] C#
 - [x] Java
 - [x] Kotlin (Partial)
-- [x] JavaScript
+- [x] JavaScript ( + React, Angular, Vue, etc.)
 - [x] TypeScript
 - [x] HTML
+- [x] XML
+- [x] YAML
 - [x] CSS
 - [x] Markdown
+- [x] SQL
+- [x] Ruby ( + Ruby on Rails)
+- [x] PHP
+- [x] Perl
+- [x] Objective-C
+- [x] Assembly (Partial)
+- [x] Makefile
+- [x] Shell Script
+- [x] JSON
+- [x] Go
+- [x] Clojure
 - [ ] Others
 
 </br>

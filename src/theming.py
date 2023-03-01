@@ -87,11 +87,13 @@ def get_token_colors(sh_system: str) -> list:
         {
             "name": "Keyword, Storage",
             "scope": [
-                # "keyword",
+                "keyword",
                 "storage.control",
                 "storage.type",
                 "storage.modifier",
                 "keyword.other",
+                "keyword.assembly",
+                "keyword.assembly",
             ],
             "settings": props(sh.keyword)
         },
@@ -114,6 +116,10 @@ def get_token_colors(sh_system: str) -> list:
             "name": "Control Flow Keyword",
             "scope": [
                 "keyword.control",
+                "keyword.package",
+                "keyword.import",
+                "keyword.other.import",
+                "keyword.other.package",
             ],
             "settings": props(sh.keyword_control)
         },
