@@ -5,8 +5,12 @@ A dark color theme for Visual Studio Code with a full black UI. -->
 
 <br/>
 
-<div align="center">
+<!-- <div align="center">
     <img alt="styx-icon" style="width:256px;height:256px;" src="https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/styx.png?raw=true">
+</div> -->
+
+<div align="center">
+    <img alt="styx-icon" style="width:256px;height:256px;" src="https://raw.githubusercontent.com/hshhrr/vscode-styx/main/assets/styx-social-preview-2.png?raw=true">
 </div>
 
 <br/>
@@ -150,7 +154,7 @@ A dark color theme for Visual Studio Code with a full black UI. -->
 - [x] HTML
 - [x] XML
 - [x] YAML
-- [x] CSS
+- [x] CSS ( + Less, Sass, etc.)
 - [x] Markdown
 - [x] SQL
 - [x] Ruby ( + Ruby on Rails)

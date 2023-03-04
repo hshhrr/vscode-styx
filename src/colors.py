@@ -38,7 +38,7 @@ class BaseColors:
     sa2: str = get_shade(sa0, 80, 20)
     
     # Warning Accent
-    wa0: str = hsv2hex(55, 45, 100)
+    wa0: str = hsv2hex(55, 55, 100)
     wa1: str = get_shade(wa0, 80, 35)
     wa2: str = get_shade(wa0, 80, 15)
     

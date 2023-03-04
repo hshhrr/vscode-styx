@@ -145,9 +145,9 @@ def get_ui_colors() -> dict:
 
         # <<- Minimap ->>
         # "minimap.findMatchHighlight": bc.red,
-        # "minimap.selectionHighlight": bc.sa0,
-        # "minimap.errorHighlight": bc.ea0,
-        # "minimap.warningHighlight": bc.wa0,
+        "minimap.selectionHighlight": bc.sa0,
+        "minimap.errorHighlight": bc.ea0,
+        "minimap.warningHighlight": bc.wa0,
         # "minimap.background": bc.red,
         # "minimap.selectionOccurrenceHighlight": bc.red,
         # "minimap.foregroundOpacity": bc.red,
@@ -289,7 +289,7 @@ def get_ui_colors() -> dict:
         # "editorOverviewRuler.warningForeground": bc.red,
         # "editorOverviewRuler.infoForeground": bc.red,
         # "editorOverviewRuler.bracketMatchForeground": bc.red,
-        # "editorError.foreground": bc.red,
+        "editorError.foreground": bc.ea0,
         # "editorError.border": bc.red,
         # "editorError.background": bc.red,
         # "editorWarning.foreground": bc.red,
@@ -328,8 +328,8 @@ def get_ui_colors() -> dict:
         "diffEditor.diagonalFill": bc.sa0 + "20",
         "diffEditor.insertedLineBackground": bc.pa2 + "70",
         "diffEditor.removedLineBackground": bc.ea2 + "70",
-        # "diffEditorGutter.insertedLineBackground": bc.pa2,
-        # "diffEditorGutter.removedLineBackground": bc.ea2,
+        "diffEditorGutter.insertedLineBackground": bc.pa2 + "90",
+        "diffEditorGutter.removedLineBackground": bc.ea2 + "90",
         "diffEditorOverview.insertedForeground": bc.pa2,
         "diffEditorOverview.removedForeground": bc.ea2,
 
