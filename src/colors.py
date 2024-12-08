@@ -18,39 +18,39 @@ def get_shade(color, s, v):
 @dataclass(frozen=True, init=False)
 class BaseColors:
     # Background
-    bg0: str = hsv2hex(225, 20, 0)
-    bg1: str = hsv2hex(225, 20, 5)
-    bg2: str = get_shade(bg1, 20, 10)
+    bg0: str = hsv2hex(225, 20, 0)              #   000000
+    bg1: str = hsv2hex(225, 20, 5)              #   0A0B0D
+    bg2: str = get_shade(bg1, 20, 10)           #   14161A
     
     # Foreground
-    fg0: str = hsv2hex(225, 5, 90)
-    fg1: str = get_shade(fg0, 10, 60)
-    fg2: str = get_shade(fg0, 30, 30)
+    fg0: str = hsv2hex(225, 5, 90)              #   DADDE6
+    fg1: str = get_shade(fg0, 10, 60)           #   8A8E99
+    fg2: str = get_shade(fg0, 30, 30)           #   363C4D
     
     # Primary Accent
-    pa0: str = hsv2hex(165, 40, 95)
-    pa1: str = get_shade(pa0, 80, 40)
-    pa2: str = get_shade(pa0, 80, 20)
+    pa0: str = hsv2hex(165, 40, 95)             #   91F2dA
+    pa1: str = get_shade(pa0, 80, 40)           #   146652
+    pa2: str = get_shade(pa0, 80, 20)           #   0A3329
     
     # Secondary Accent
-    sa0: str = hsv2hex(210, 40, 100)
-    sa1: str = get_shade(sa0, 80, 40)
-    sa2: str = get_shade(sa0, 80, 20)
+    sa0: str = hsv2hex(210, 40, 100)            #   99CCFF
+    sa1: str = get_shade(sa0, 80, 40)           #   143D66
+    sa2: str = get_shade(sa0, 80, 20)           #   0A1F33
     
     # Warning Accent
-    wa0: str = hsv2hex(55, 55, 100)
-    wa1: str = get_shade(wa0, 80, 35)
-    wa2: str = get_shade(wa0, 80, 15)
+    wa0: str = hsv2hex(55, 55, 100)             #   FFF373
+    wa1: str = get_shade(wa0, 80, 35)           #   4D470F
+    wa2: str = get_shade(wa0, 80, 15)           #   262307
     
     # Debug Accent
-    da0: str = hsv2hex(240, 40, 100)
-    da1: str = get_shade(da0, 60, 40)
-    da2: str = get_shade(da0, 60, 20)
+    da0: str = hsv2hex(240, 40, 100)            #   9999FF
+    da1: str = get_shade(da0, 60, 40)           #   292966
+    da2: str = get_shade(da0, 60, 20)           #   141433
     
     # Error Accent
-    ea0: str = hsv2hex(0, 55, 100)
-    ea1: str = get_shade(ea0, 80, 35)
-    ea2: str = get_shade(ea0, 80, 15)
+    ea0: str = hsv2hex(0, 55, 100)              #   FF7373
+    ea1: str = get_shade(ea0, 80, 35)           #   592828
+    ea2: str = get_shade(ea0, 80, 15)           #   261111
     
     # Terminal
     ansiBlack: str = bg0                        #   Material - Black
@@ -163,21 +163,21 @@ class VSCodeDefaultTokenColors:
 
 @dataclass(frozen=True, init=False)
 class StyxTokenColors:
-    white: str = hsv2hex(225, 5, 100)
-    gray: str = hsv2hex(225, 40, 60)            #   Dracula - Gray
+    white: str = hsv2hex(225, 5, 100)           #   F2F5FF
+    gray: str = hsv2hex(225, 40, 60)            #   5C6B99 -> Dracula - Gray
     
-    red: str = hsv2hex(0, 65, 95)
-    amber: str = hsv2hex(35, 70, 100)
-    yellow: str = hsv2hex(45, 35, 100)
-    lime: str = hsv2hex(100, 30, 90)
-    teal: str = hsv2hex(155, 40, 90)
-    green: str = hsv2hex(160, 70, 90)
-    cyan: str = hsv2hex(180, 40, 95)
-    blue: str = hsv2hex(195, 65, 100)
-    periwinkle: str = hsv2hex(240, 25, 100)
-    purple: str = hsv2hex(260, 50, 100)
-    pink: str = hsv2hex(330, 30, 100)
-    coral: str = hsv2hex(345, 50, 90)
+    red: str = hsv2hex(0, 65, 95)               #   F25555
+    amber: str = hsv2hex(35, 70, 100)           #   FFB54D
+    yellow: str = hsv2hex(45, 35, 100)          #   FFE9A6
+    lime: str = hsv2hex(100, 30, 90)            #   B8E6A1
+    teal: str = hsv2hex(155, 40, 90)            #   8AE6BF
+    green: str = hsv2hex(160, 70, 90)           #   45E6B0
+    cyan: str = hsv2hex(180, 40, 95)            #   91F2F2
+    blue: str = hsv2hex(195, 65, 100)           #   59D6FF
+    periwinkle: str = hsv2hex(240, 25, 100)     #   BFBFFF
+    purple: str = hsv2hex(260, 50, 100)         #   AA80FF
+    pink: str = hsv2hex(330, 30, 100)           #   FFB3D9
+    coral: str = hsv2hex(345, 50, 90)           #   E6738F
     
     
 @dataclass(frozen=True, init=False)
